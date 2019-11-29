@@ -1,0 +1,43 @@
+﻿@model MantenimientoVisitas.Models.Area
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Area</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NombreArea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NombreArea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Estado)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Estado)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumerosVisita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumerosVisita)
+            @Html.ActionLink("", "Index", "Visitas", new { Nombre = Model.NombreArea});
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AreaID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
